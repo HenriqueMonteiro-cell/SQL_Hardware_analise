@@ -11,7 +11,7 @@ Este projeto realiza o processamento e análise estatística de dados de monitor
 ## 📁 Gestão de Dados (Big Data vs. GitHub)
 
 O dataset completo utilizado para a análise possui **1.26 GB**, o que excede o limite de upload do GitHub. Para viabilizar a demonstração do projeto neste repositório:
-* **Arquivo de Amostra:** Disponibilizei o arquivo `harddriver_sample.csv`, que contém uma amostra reduzida para testes rápidos de código.
+* **Arquivo de Amostra:** Disponibilizei o arquivo `harddrive.csv`, que contém uma amostra reduzida para testes rápidos de código.
 * **Análise Real:** Os resultados e gráficos apresentados foram gerados localmente processando a base completa de 1.26 GB dentro do banco de dados `big_data.db`.
 
 ## 🛠️ Tecnologias Utilizadas
