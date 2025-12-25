@@ -41,5 +41,3 @@ Abaixo, o resumo da estabilidade consolidado por fabricante (dados processados v
 3. Execute o script de ingestão (o processo criará o arquivo `big_data.db`).
 4. Rode as queries de análise para gerar os relatórios.
 
----
-**Desenvolvido por seu Nome** *Físico | Analista de Dados | Enthusiast em Infraestrutura de TI*
