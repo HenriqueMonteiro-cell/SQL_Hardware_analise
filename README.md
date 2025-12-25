@@ -6,7 +6,13 @@ Este projeto realiza o processamento e análise estatística de dados de monitor
 
 * **Processamento de Big Data:** Implementação de uma pipeline de ingestão de dados via Python, utilizando a técnica de *chunking* para processar arquivos que excedem a memória RAM disponível.
 * **Arquitetura SQL:** Migração de dados brutos (CSV) para um banco de dados estruturado (**SQLite**), permitindo consultas performáticas em milhões de registros.
-* **Métricas de Confiabilidade:** Aplicação de conceitos estatísticos para calcular a Taxa de Estabilidade, normalizando os dados para uma comparação justa entre diferentes volumes de uso.
+* **Métricas de Estabilidade:** Aplicação de conceitos estatísticos para calcular a Taxa de Estabilidade, normalizando os dados para uma comparação justa entre diferentes volumes de uso.
+
+## 📁 Gestão de Dados (Big Data vs. GitHub)
+
+O dataset completo utilizado para a análise possui **1.26 GB**, o que excede o limite de upload do GitHub. Para viabilizar a demonstração do projeto neste repositório:
+* **Arquivo de Amostra:** Disponibilizei o arquivo `harddriver_sample.csv`, que contém uma amostra reduzida para testes rápidos de código.
+* **Análise Real:** Os resultados e gráficos apresentados foram gerados localmente processando a base completa de 1.26 GB dentro do banco de dados `big_data.db`.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -16,7 +22,7 @@ Este projeto realiza o processamento e análise estatística de dados de monitor
 
 ## 📈 Metodologia e Cálculo
 
-Para determinar quais componentes apresentam maior estabilidade, foi utilizada a seguinte fórmula matemática para normalizar as falhas em relação ao tempo de operação (registros):
+Para determinar quais componentes apresentam maior estabilidade, foi utilizada a seguinte fórmula matemática:
 
 $$\text{Taxa \%} = \frac{\text{Total de Falhas}}{\text{Total de Registros}} \times 100$$
 
@@ -24,7 +30,7 @@ Esta métrica permite identificar modelos que, embora tenham um número absoluto
 
 ## 🔍 Resultados Obtidos
 
-Abaixo, o resumo da estabilidade consolidado por fabricante (dados processados via SQL):
+Abaixo, o resumo da estabilidade consolidado por fabricante (dados processados via SQL na base completa):
 
 | Fabricante | Total de Falhas | Total de Amostras | Taxa de Estabilidade (%) |
 | :--- | :--- | :--- | :--- |
@@ -36,9 +42,8 @@ Abaixo, o resumo da estabilidade consolidado por fabricante (dados processados v
 
 ## 📂 Como Executar
 
-1. Baixe o dataset `harddriver.csv` no Kaggle.
-2. Certifique-se de que o arquivo está na mesma pasta do notebook.
+1. Para a análise completa, baixe o dataset `harddriver.csv` original no Kaggle.
+2. Para testes rápidos, utilize o `harddriver_sample.csv` incluso neste repositório.
 3. Execute o script de ingestão (o processo criará o arquivo `big_data.db`).
 4. Rode as queries de análise para gerar os relatórios.
-
 
